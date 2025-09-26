@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Flame</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="shortcut icon" href="images/logo/logo.png" type="image/x-icon">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+            <div class="container-fluid g-0 pe-2">
+                <a class="navbar-brand text-warning fw-bolder fs-1 " href="#"><img src="images/logo/logo.png" class="rounded-circle logo" alt=""> Fresh Flame </a>
+                <div class="bg-light mx-3 d-none d-md-block" style="width: 1px;height: 70px;"></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link border rounded border-dark  text-light" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                            <a class="nav-link border rounded border-dark text-light" href="#">about us</a>
+                        </li>
+                        <li class="nav-item ms-lg-2 mt-2 mt-lg-0 dropdown">
+                            <a class="nav-link border rounded border-dark text-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <span class="text-warning">m</span>enu
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">pizza</a></li>
+                                <li><a class="dropdown-item" href="#">burger</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">HEALTHY SALAD</a></li>
+                                <li><a class="dropdown-item" href="#">MEALS</a></li>
+                                <li><a class="dropdown-item" href="#">Crispy Chicken</a></li>
+                                <li><a class="dropdown-item" href="#">More..</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                            <a class="nav-link border rounded border-dark text-light" href="#">contact us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-warning" type="submit">Search</button>
+                    </form>
+                    <button type="button" class="btn btn-outline-warning ms-lg-2 mt-2 mt-lg-0" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Log in
+                    </button>
+                    
+                </div>
+            </div>
+        </nav>
+        <!-- نافذة الـ Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-2 fst-italic" id="loginModalLabel">Log in</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div> <!-- /modal-header -->
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                            </div>
+                            <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-warning w-100">Log in</button>
+                        </form>
+                    </div> <!-- /modal-body -->
+                </div> <!-- /modal-content -->
+            </div> <!-- /modal-dialog -->
+        </div> <!-- /modal -->
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container-fluid p-0">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active vh-100">
+                            <img src="images/hero/pizza.png" class="d-block w-100 h-100  hero-img" alt="...">
+                            <div class="carousel-caption  d-block main-content rounded-1 p-2 p-md-4 mb-3 border border-light">
+                                <h5 class="text-uppercase">pizza</h5>
+                                <p class="text-capitalize">that pizza 🍕 was absolutly amazing! we couldn't get enough</p>
+                                <button class="btn btn-outline-warning">Order Now</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item vh-100">
+                            <img src="images/hero/salad.png" class="d-block w-100 h-100 hero-img" alt="...">
+                            <div class="carousel-caption d-block main-content rounded-1 p-2 p-md-4 mb-3 border border-light">
+                                <h5 class="text-uppercase">salad</h5>
+                                <p class="text-capitalize">that salad was surprisingly amazing 🥗 who knew healthy could taste this good?</p>
+                                <button class="btn btn-outline-warning">Order Now</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item vh-100">
+                            <img src="images/hero/burger.png" class="d-block w-100 h-100 hero-img" alt="...">
+                            <div class="carousel-caption d-block main-content rounded-1 p-2 p-md-4 mb-3 border border-light">
+                                <h5 class="text-uppercase">burger</h5>
+                                <p class="text-capitalize">we had such a greate time with that burger 🍔 !juicy and perfect</p>
+                                <button class="btn btn-outline-warning">Order Now</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item vh-100">
+                            <img src="images/hero/cheken.png" class="d-block w-100 h-100 hero-img" alt="...">
+                            <div class="carousel-caption d-block main-content rounded-1 p-2 p-md-4 mb-3 border border-light">
+                                <h5 class="text-uppercase">chicken</h5>
+                                <p class="text-capitalize">didn't expect chicken to taste this good 🍗 healthy and delicious in one bite!</p>
+                                <button class="btn btn-outline-warning">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section> <!-- /hero -->
+    
+    
+        <!-- icons -->
+        <div class="d-flex flex-column position-fixed top-50 end-0  translate-middle-y me-2  g-3 social-icons-container">
+            <a href="#" class="p-0 social-icons fs-1 text-warning opacity-75"><i class="fa-brands fa-square-facebook "></i></a>
+            <a href="#" class="p-0 social-icons fs-1 text-warning opacity-75"><i class="fa-brands fa-square-twitter "></i></a>
+            <a href="#" class="p-0 social-icons fs-1 text-warning opacity-75"><i class="fa-brands fa-square-whatsapp "></i></a>
+            <a href="#" class="p-0 social-icons fs-1 text-warning opacity-75"><i class="fa-brands fa-square-instagram "></i></a>
+            <a href="#" class="p-0 social-icons fs-1 text-warning opacity-75"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <!-- /icons -->
+
+
+        <section class="welcome">
+                <div class="p-3 text-white" style="background: linear-gradient(to bottom, #8fc7ff, #2C3E50);">
+                    <h2 class="fw-bold text-warning">Welcome</h2>
+                    <p class="mb-4">
+                        Welcome to Fresh Flame - Step into a world of gourmet fast food crafted with passion and premium ingredients. whether you're craving a juicy burger, artWelcome to Fresh Flame - Step into a world of gourmet fast food crafted with passion and premium ingredients. Whether you're craving a juicy burger, artisanal pizza, fresh vibrant salad or crispy chicken — we've redefired fast Dining To Offer You Elegance, Flavor, And Comfort In Every Bite. Sit Back, Relax, And Let Us Serve You Excellence —
+                        Fast.
+                    </p>
+                    <a href="#" class="btn btn-warning">Learn More</a>
+                </div>
+        </section> <!-- /welcome -->
+
+        <hr>
+
+        <section class="famous">
+            <div class="container-fluid text-center text-light p-5 text-capitalize rounded-1 border border-dark" style="background-color: #2C3E50;">
+                <h2 class="fst-italic fw-bolder">the most famous dishes in our restaurant</h2>
+            </div>
+            <div class="container-fluid p-0 mt-4">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item rounded-3">
+                        <h2 class="accordion-header "  id="headingOne">
+                            <button class="accordion-button collapsed fs-4 text-capitalize fst-italic rounded-3" style="color: #2C3E50; background-color: #c2e1ff;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                aria-expanded="false" aria-controls="collapseOne">
+                                fried chicken
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                A crispy and flavorful meal made with tender chicken pieces, seasoned with special herbs and spices, coated in a golden
+                                crunchy crust. Perfectly fried and served hot with fries, coleslaw, or your favorite sauce.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item rounded-3">
+                        <h2 class="accordion-header "  id="headingTwo">
+                            <button class="accordion-button collapsed fs-4 text-capitalize fst-italic rounded-3" style="color: #2C3E50; background-color: #c2e1ff;" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                type of salad
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Enjoy a variety of fresh and flavorful salads made with hand-picked ingredients.
+                                Choose from classic Caesar salad, fresh garden salad, tangy Greek salad with olives and feta,
+                                or creamy coleslaw. Perfect as a healthy meal.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item rounded-3">
+                        <h2 class="accordion-header "  id="headingThree">
+                            <button class="accordion-button collapsed fs-4 text-capitalize fst-italic rounded-3" style="color: #2C3E50; background-color: #c2e1ff;" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                types of pizza
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Discover a range of delicious pizzas to satisfy every craving.
+                                From the classic Margherita with fresh basil and mozzarella,
+                                to Pepperoni loaded with spicy slices, BBQ Chicken with tangy sauce,
+                                or a colorful Veggie Pizza topped with fresh vegetables.
+                                Hot, cheesy, and freshly baked every time!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- /famous -->
+        
+        <hr>
+
+        <section class="translate">
+            <div class="container-fluid p-0">
+                <div class=" text-center text-light p-4 text-capitalize rounded-1 border border-dark" style="background-color: #2C3E50;">
+                    <h2 class="fst-italic">translate from arabic to english</h2>
+                </div>
+                <div class="py-3 px-2 px-md-3" style="background: linear-gradient(to bottom, #8fc7ff, #2C3E50);">
+                    <h3 class="text-light text-capitalize fs-4">write and translate <a href="#" class="text-warning text-decoration-none">press here</a></h3>
+                    <div>
+                        <!-- Button trigger modal -->
+                        <div>
+                            <button type="button" class="btn btn-warning px-4 copy-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                copy
+                            </button>
+                            <span class="bg-light rounded-pill px-2 py-1 d-none text-center copied-msg ">Copied!</span>
+                        </div>
+                        <div class="form-floating mt-3 mb-2">
+                            <textarea class="form-control " placeholder="" id="translateBox"  style="height: 120px"></textarea>
+                            <label for="translateBox">Translate:</label>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal modal-sm fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-4 text-warning fst-italic" id="exampleModalLabel">Restaurant</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            the message copied
+                            <div class="mt-4 text-end ">
+
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+        
+
+            <div class="container-fluid p-0">
+                <div class=" text-center text-light p-4 text-capitalize rounded-1 border border-dark"
+                    style="background-color: #2C3E50;">
+                    <h2 class="fst-italic">translate from arabic to frensh</h2>
+                </div>
+                <div class="py-3 px-2 px-md-3" style="background: linear-gradient(to bottom, #8fc7ff, #2C3E50);">
+                    <h3 class="text-light text-capitalize h4">write and translate <a href="#"
+                            class="text-warning text-decoration-none">press here</a></h3>
+                    <div>
+                        <!-- Button trigger modal -->
+                        <div>
+                            <button type="button" class="btn btn-warning px-4 copy-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                copy
+                            </button>
+                            <span class="bg-light rounded-pill px-2 py-1 d-none text-center copied-msg ">Copied!</span>
+                        </div>
+                        <div class="form-floating mt-3 mb-2">
+                            <textarea class="form-control " placeholder="" id="translateBox" style="height: 120px"></textarea>
+                            <label for="translateBox">Translate:</label>
+                        </div>
+        
+        
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal modal-sm fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-4 text-warning fst-italic" id="exampleModalLabel">Restaurant</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            the message copied
+                            <div class="mt-4 text-end ">
+        
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+
+            <hr>
+
+        
+
+        
+            <div class="container-fluid p-0">
+                <div class=" text-center text-light p-4 text-capitalize rounded-1 border border-dark"
+                    style="background-color: #2C3E50;">
+                    <h2 class="fst-italic">translate from arabic to german</h2>
+                </div>
+                <div class="py-3 px-2 px-md-3" style="background: linear-gradient(to bottom, #8fc7ff, #2C3E50);">
+                    <h3 class="text-light text-capitalize h4">write and translate <a href="#"
+                            class="text-warning text-decoration-none">press here</a></h3>
+                    <div>
+                        <!-- Button trigger modal -->
+                        <div>
+                            <button type="button" class="btn btn-warning px-4 copy-btn" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                copy
+                            </button>
+                            <span class="bg-light rounded-pill px-2 py-1 d-none text-center copied-msg ">Copied!</span>
+                        </div>
+                        
+                        <div class="form-floating mt-3 mb-2">
+                            <textarea class="form-control " placeholder="" id="translateBox" style="height: 120px"></textarea>
+                            <label for="translateBox">Translate:</label>
+                        </div>
+        
+        
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal modal-sm fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-4 text-warning fst-italic" id="exampleModalLabel">Restaurant</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            the message copied
+                            <div class="mt-4 text-end ">
+        
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- /translate -->
+
+        <hr>
+
+
+        <section class="fixed-image">
+            <div class="container-fluid p-0 bg-primary bg-image">
+
+            </div>
+        </section> <!-- /fixed-image -->
+
+
+
+        <section class="popular">
+            <div class="container-fluid p-0 mt-5">
+                <div class=" text-center text-light p-4 text-capitalize rounded-1 border border-dark"
+                    style="background-color: #2C3E50;">
+                    <h2 class="fst-italic h3">.. popular dishes in our restaurant ..</h2>
+                </div> <!-- /title -->
+                <div class="container px-3 px-md-1">
+                    <div class="row gx-4 justify-content-evenly">
+                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                            <div class="card  w-100 mt-4 dishes" >
+                                <img src="images/popular/salad.jpg" class="card-img-top px-2 rounded-top-1" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-warning fst-italic ">salad</h5>
+                                    <div class="container text-end mb-2 position-relative" style="height: 40px;">
+                                        <a href="#" class="btn btn-warning fs-6 px-4 me-2 position-absolute top-0 end-0  show-btn">SHOW</a>
+                                    </div> <!-- /container -->
+                                    <p class="card-text text-center text-md-start">A light and healthy mix of veggies full of fresh flavor.</p>
+                                </div> <!-- /card-body -->
+                            </div> <!-- /card -->
+                        </div> <!-- /col -->
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                            <div class="card  w-100 mt-4 dishes" >
+                                <img src="images/popular/pizza.jpg" class="card-img-top px-2 rounded-top-1" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-warning fst-italic " >pizza</h5>
+                                    <div class="container text-end mb-2 position-relative" style="height: 40px;">
+                                        <a href="#" class="btn btn-warning fs-6 px-4 me-2 position-absolute top-0 end-0  show-btn">SHOW</a>
+                                    </div> <!-- /container -->
+                                    <p class="card-text text-center text-md-start">Crispy crust with melted cheese and rich tomato sauce.</p>
+                                </div> <!-- /card-body -->
+                            </div> <!-- /card -->
+                        </div> <!-- /col -->
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                            <div class="card  w-100 mt-4 dishes" >
+                                <img src="images/popular/chicken.jpg" class="card-img-top px-2 rounded-top-1" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-warning fst-italic ">chicken</h5>
+                                    <div class="container text-end mb-2 position-relative" style="height: 40px;">
+                                        <a href="#" class="btn btn-warning fs-6 px-4 me-2 position-absolute top-0 end-0  show-btn">SHOW</a>
+                                    </div> <!-- /container -->
+                                    <p class="card-text text-center text-md-start">Juicy fried chicken served hot with a golden crunch.</p>
+                                </div> <!-- /card-body -->
+                            </div> <!-- /card -->
+                        </div> <!-- /col -->
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                            <div class="card  w-100 mt-4 dishes" >
+                                <img src="images/popular/meals.jpg" class="card-img-top px-2 rounded-top-1" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-warning fst-italic ">meals</h5>
+                                    <div class="container text-end mb-2 position-relative" style="height: 40px;">
+                                        <a href="#" class="btn btn-warning fs-6 px-4 me-2 position-absolute top-0 end-0  show-btn">SHOW</a>
+                                    </div> <!-- /container -->
+                                    <p class="card-text text-center text-md-start">A variety of tasty dishes served with sides and sauces.</p>
+                                </div> <!-- /card-body -->
+                            </div> <!-- /card -->
+                        </div> <!-- /col -->
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                            <div class="card  w-100 mt-4 dishes" >
+                                <img src="images/popular/fries.jpg" class="card-img-top px-2 rounded-top-1" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-warning fst-italic ">fries</h5>
+                                    <div class="container text-end mb-2 position-relative" style="height: 40px;">
+                                        <a href="#" class="btn btn-warning fs-6 px-4 me-2 position-absolute top-0 end-0  show-btn">SHOW</a>
+                                    </div> <!-- /container -->
+                                    <p class="card-text text-center text-md-start">Golden crispy fries, perfectly salted and served hot.</p>
+                                </div> <!-- /card-body -->
+                            </div> <!-- /card -->
+                        </div> <!-- /col -->
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                            <div class="card  w-100 mt-4 dishes" >
+                                <img src="images/popular/shawerma.jpg" class="card-img-top px-2 rounded-top-1" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-warning fst-italic ">shawerma</h5>
+                                    <div class="container text-end mb-2 position-relative" style="height: 40px;">
+                                        <a href="#" class="btn btn-warning fs-6 px-4 me-2 position-absolute top-0 end-0  show-btn">SHOW</a>
+                                    </div> <!-- /container -->
+                                    <p class="card-text text-center text-md-start">Juicy shawerma wrap packed with fresh veggies and flavor.</p>
+                                </div> <!-- /card-body -->
+                            </div> <!-- /card -->
+                        </div> <!-- /col -->
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                            <div class="card  w-100 mt-4 dishes" >
+                                <img src="images/popular/meat.jpg" class="card-img-top px-2 rounded-top-1" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-warning fst-italic ">meat</h5>
+                                    <div class="container text-end mb-2 position-relative" style="height: 40px;">
+                                        <a href="#" class="btn btn-warning fs-6 px-4 me-2 position-absolute top-0 end-0 show-btn">SHOW</a>
+                                    </div> <!-- /container -->
+                                    <p class="card-text text-center text-md-start">Tender grilled meat served with veggies and rich flavor.</p>
+                                </div> <!-- /card-body -->
+                            </div> <!-- /card -->
+                        </div> <!-- /col -->
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                            <div class="card  w-100 mt-4 dishes" >
+                                <img src="images/popular/pastries.jpg" class="card-img-top px-2 rounded-top-1" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-warning fst-italic ">pastries</h5>
+                                    <div class="container text-end mb-2 position-relative" style="height: 40px;">
+                                        <a href="#" class="btn btn-warning fs-6 px-4 me-2 position-absolute top-0 end-0 show-btn">SHOW</a>
+                                    </div> <!-- /container -->
+                                    <p class="card-text text-center text-md-start">Freshly baked pastries filled with taste and golden crust.</p>
+                                </div> <!-- /card-body -->
+                            </div> <!-- /card -->
+                        </div> <!-- /col -->
+                    </div> <!-- /row -->
+                </div> <!-- /container -->
+            </div> <!-- /container-fluid -->
+        </section> <!-- /popular -->
+
+        <section class="fixed-image-2">
+            <div class="container-fluid p-0 bg-primary mt-5 bg-image2">
+        
+            </div>
+        </section> <!-- /fixed-image-2 -->
+
+        <hr>
+
+        <section class="thanks">
+            <div class="container-fluid p-0 mb-5">
+                <div class=" text-center text-light p-3 text-capitalize rounded-1 border border-dark mb-5"
+                    style="background-color: #2C3E50;">
+                    <h2 class="fst-italic fw-bolder h2">.. thanks for ..</h2>
+                </div> <!-- /title -->
+                <div class="container-md px-0 px-md-1">
+                    <div class="row gx-0 gx-md-5 justify-content-evenly">
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="card text-bg-dark rounded-5 position-relative mx-auto overflow-hidden w-75 scale" >
+                                <img src="images/thanks/chef.png" class="card-img rounded-5 img-fluid " alt="...">
+                                <div class="card-img-overlay bg-black bg-opacity-50 text-capitalize rounded-5 overlay">
+                                    <h5 class="card-title fs-6 fst-italic opacity-75">all thanks and appreciation</h5>
+                                    <p class="card-text opacity-75"><i class="fa-regular fa-clock"></i> June 22 2025</p>
+                                    <div class="card bg-transparent border-0 position-absolute bottom-0 start-0 ps-3 pb-1 w-100 inner-card" style="width: 10rem;">
+                                        <img src="images/thanks/chef.png" class="card-img-top rounded-pill  " style="width: 100px;" alt="...">
+                                        <div class="card-body ps-0 pt-1">
+                                            <h5 class="card-title fs-6">Chef Marco Rossi</h5>
+                                            <p class="card-text fs-6">Head Chef – Fresh Flame</p>
+                                        </div> <!-- /card-body -->
+                                    </div> <!-- /card -->
+                                </div> <!-- /card-img-overlay -->
+                            </div> <!-- /card -->
+                        </div> <!-- /col -->
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="card text-bg-dark rounded-5 position-relative mx-auto overflow-hidden w-75 scale" >
+                                <img src="images/thanks/schef.png" class="card-img rounded-5 img-fluid " alt="...">
+                                <div class="card-img-overlay bg-black bg-opacity-50 text-capitalize rounded-5 overlay">
+                                    <h5 class="card-title fs-6 fst-italic opacity-75">all thanks and appreciation</h5>
+                                    <p class="card-text opacity-75"><i class="fa-regular fa-clock"></i> June 22 2025</p>
+                                    <div class="card bg-transparent border-0 position-absolute bottom-0 start-0 ps-3 pb-1 w-100 inner-card" style="width: 10rem;">
+                                        <img src="images/thanks/schef.png" class="card-img-top rounded-pill  " style="width: 100px;" alt="...">
+                                        <div class="card-body ps-0 pt-1">
+                                            <h5 class="card-title fs-6">David Khalil</h5>
+                                            <p class="card-text fs-6">Sous Chef – Fresh Flame</p>
+                                        </div> <!-- /card-body -->
+                                    </div> <!-- /card -->
+                                </div> <!-- /card-img-overlay -->
+                            </div> <!-- /card -->
+                        </div> <!-- /col -->
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="card text-bg-dark rounded-5 position-relative mx-auto overflow-hidden w-75 scale" >
+                                <img src="images/thanks/weitar.png" class="card-img rounded-5 img-fluid " alt="...">
+                                <div class="card-img-overlay bg-black bg-opacity-50 text-capitalize rounded-5 overlay">
+                                    <h5 class="card-title fs-6 fst-italic opacity-75">all thanks and appreciation</h5>
+                                    <p class="card-text opacity-75"><i class="fa-regular fa-clock"></i> June 22 2025</p>
+                                    <div class="card bg-transparent border-0 position-absolute bottom-0 start-0 ps-3 pb-1 w-100 inner-card" style="width: 10rem;">
+                                        <img src="images/thanks/weitar.png" class="card-img-top rounded-pill  " style="width: 100px;" alt="...">
+                                        <div class="card-body ps-0 pt-1">
+                                            <h5 class="card-title fs-6">Ahmed Youssef</h5>
+                                            <p class="card-text fs-6">Waiter – Fresh Flame</p>
+                                        </div> <!-- /card-body -->
+                                    </div> <!-- /card -->
+                                </div> <!-- /card-img-overlay -->
+                            </div> <!-- /card -->
+                        </div> <!-- /col -->
+                    </div> <!-- /row -->
+                </div> <!-- /container -->
+            </div> <!-- /container-fluid -->
+        </section> <!-- /thanks -->
+
+        <section class="news">
+            <div class="container-md mb-5 px-1">
+                <div class=" text-center p-3 text-capitalize  mb-5"
+                    style="color: #2C3E50;">
+                    <h2 class=" fw-bolder h1 ">restaurant news</h2>
+                </div> <!-- /title -->
+                <div class="card mb-5 w-100 px-2 shadow news-card" >
+                    <div class="row g-0 ">
+                        <div class="col-md-8 col-12 order-2 order-md-1">
+                            <div class="card-body d-flex flex-column h-100">
+                                <h5 class="card-title h3 fst-italic text-capitalize " style="color :#2C3E50;">dish of the day</h5>
+                                <p class="card-text text-muted text-capitalize">sat. sep 27th 2025</p>
+                                <div class="progress mb-2 ms-2" style="height: 6px; width: 15%;">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div> <!-- /progress -->
+                                <p class="card-text">Today’s special – a freshly baked cheese pizza with a golden crust, served with a side of crispy fries. Perfectly
+                                delicious and made to satisfy your cravings!</p>
+                                <div class="mt-auto btns">
+                                    <button class="btn btn-dark text-warning shadow "><i class="fa-solid fa-pizza-slice"></i> Order Now</button>
+                                </div> <!-- /btns -->
+                            </div> <!-- /card-body -->
+                        </div> <!-- /col-8 -->
+                        <div class="col-md-4 col-12 overflow-hidden position-relative order-1 order-md-2 news-image-div-right">
+                            <img src="images/news/day.png" class="img-fluid news-image" alt="...">
+                        </div> <!-- /col-4 -->
+                    </div> <!-- /row -->
+                </div> <!-- /card -->
+
+                <div class="card mb-5 w-100 px-2 shadow news-card" >
+                    <div class="row g-0">
+                        <div class="col-md-4 col-12 overflow-hidden position-relative news-image-div-left">
+                            <img src="images/news/healthy.jpg" class="img-fluid news-image" alt="...">
+                        </div> <!-- /col-4 -->
+                        <div class="col-md-8 col-12">
+                            <div class="card-body d-flex flex-column h-100">
+
+                                <h5 class="card-title h3 fst-italic text-capitalize" style="color :#2C3E50;">healthy choice</h5>
+                                <p class="card-text text-muted text-capitalize">sun. sep. 28th 2025</p>
+                                <div class="progress mb-2 ms-2" style="height: 6px; width: 15%;">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div> <!-- /progress -->
+                                <p class="card-text">Fresh, light, and full of flavor! Our healthy options are crafted with the finest ingredients to keep you energized and
+                                satisfied.</p>
+                                <div class="mt-auto btns">
+                                    <button class="btn btn-dark text-warning shadow "><i class="fa-solid fa-leaf"></i> Explore Menu</button>
+                                </div> <!-- /btns -->
+                                </div> <!-- /card-body -->
+                            </div> <!-- /col-8 -->
+                    </div> <!-- /row -->
+                </div> <!-- /card -->
+
+                <div class="card mb-5 w-100 px-2 shadow news-card" >
+                    <div class="row g-0">
+                        <div class="col-md-8 col-12 order-2 order-md-1">
+                            <div class="card-body d-flex flex-column h-100">
+                                <h5 class="card-title h3 fst-italic text-capitalize" style="color :#2C3E50;">chef's special</h5>
+                                <p class="card-text text-muted text-capitalize">fri. sep. 26th 2025</p>
+                                <div class="progress mb-2 ms-2" style="height: 6px; width: 15%;">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div> <!-- /progress -->
+                                <p class="card-text">Succulent grilled steak served with fresh vegetables and golden potatoes — a perfect meal for meat lovers. Enjoy the
+                                chef’s signature special today!</p>
+                                <div class="mt-auto btns">
+                                    <button class="btn btn-dark text-warning shadow "><i class="fa-solid fa-utensils"></i> Try Now</button>
+                                </div> <!-- /btns -->
+                                </div> <!-- /card-body -->
+                            </div> <!-- /col-8 -->
+                            <div class="col-md-4 col-12 overflow-hidden position-relative order-1 order-md-2 news-image-div-right">
+                                <img src="images/news/special.png" class="img-fluid news-image" alt="...">
+                            </div> <!-- /col-4 -->
+                    </div> <!-- /row -->
+                </div> <!-- /card -->
+
+                <div class="card mb-5 w-100 px-2 shadow news-card" >
+                    <div class="row g-0">
+                        <div class="col-md-4 col-12 overflow-hidden position-relative news-image-div-left">
+                            <img src="images/news/offer.png" class="img-fluid news-image " alt="...">
+                        </div> <!-- /col-4 -->
+                        <div class="col-md-8 col-12">
+                            <div class="card-body d-flex flex-column h-100">
+                                <h5 class="card-title h3 fst-italic text-capitalize" style="color :#2C3E50;">special offer</h5>
+                                <p class="card-text text-muted text-capitalize">Mon. sep. 22th 2025</p>
+                                <div class="progress mb-2 ms-2" style="height: 6px; width: 15%;">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
+                                </div> <!-- /progress -->
+                                <p class="card-text">Enjoy our delicious combo meal with a juicy beef burger, crispy golden fries, and an ice-cold drink.
+                                This week only, get <span class="fw-bold">20% OFF</span> on all combos. Don’t miss out!</p>
+                                <div class="mt-auto btns">
+                                    <button class="btn btn-dark text-warning shadow "><i class="fa-solid fa-burger"></i> Grab Deal</button>
+                                </div> <!-- /btns -->
+                                </div> <!-- /card-body -->
+                            </div> <!-- /col-8 -->
+                    </div> <!-- /row -->
+                </div> <!-- /card -->
+
+
+            </div> <!-- /container -->
+        </section> <!-- /news -->
+
+
+        <section class="social-media">
+            <div class="container mt-5 mb-5">
+                <div class="row justify-content-evenly g-4 g-lg-0 mt-5 mt-md-0">
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="card mx-auto shadow border border-dark social-card" style="width: 13rem; height: 13rem;">
+                            <div class="card-body text-capitalize text-center d-flex flex-column justify-content-between align-items-center">
+                                <h5 class="card-title fst-italic" style="color : #2C3E50;">subscribe now</h5>
+                                <img src="images/sotial icons/whatsapp.png" class="card-img w-50" alt="...">
+                                <div class="link mt-auto">
+                                    <a href="#" class="fs-5 btn-link">Go to link</a>
+                                </div> <!-- /link -->
+                            </div> <!-- /card-body -->
+                        </div> <!-- /card -->
+                    </div> <!-- /col -->
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="card mx-auto shadow border border-dark social-card" style="width: 13rem; height: 13rem;">
+                            <div class="card-body text-capitalize text-center d-flex flex-column justify-content-between align-items-center">
+                                <h5 class="card-title fst-italic" style="color : #2C3E50;">subscribe now</h5>
+                                <img src="images/sotial icons/glossy-instagram-3d-render-icon-free-png.jpg" class="card-img w-50" alt="...">
+                                <div class="link mt-auto">
+                                    <a href="#" class="fs-5 btn-link">Go to link</a>
+                                </div> <!-- /link -->
+                            </div> <!-- /card-body -->
+                        </div> <!-- /card -->
+                    </div> <!-- /col -->
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="card mx-auto shadow border border-dark social-card" style="width: 13rem; height: 13rem;">
+                            <div class="card-body text-capitalize text-center d-flex flex-column justify-content-between align-items-center">
+                                <h5 class="card-title fst-italic" style="color : #2C3E50;">subscribe now</h5>
+                                <img src="images/sotial icons/linkedin.jpg" class="card-img w-50" alt="...">
+                                <div class="link mt-auto">
+                                    <a href="#" class="fs-5 btn-link">Go to link</a>
+                                </div> <!-- /link -->
+                            </div> <!-- /card-body -->
+                        </div> <!-- /card -->
+                    </div> <!-- /col -->
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="card mx-auto shadow border border-dark social-card" style="width: 13rem; height: 13rem;">
+                            <div class="card-body text-capitalize text-center d-flex flex-column justify-content-between align-items-center">
+                                <h5 class="card-title fst-italic" style="color : #2C3E50;">subscribe now</h5>
+                                <img src="images/sotial icons/twitter.png" class="card-img w-50" alt="...">
+                                <div class="link mt-auto">
+                                    <a href="#" class="fs-5 btn-link">Go to link</a>
+                                </div> <!-- /link -->
+                            </div> <!-- /card-body -->
+                        </div> <!-- /card -->
+                    </div> <!-- /col -->
+                </div> <!-- /row -->
+            </div> <!-- /container -->
+        </section> <!-- /social-media -->
+
+    </main>
+
+    <footer>
+        <div class="container-fluid bg-dark pt-5 pb-2 px-0">
+            <div class="w-100 bg-secondary mt-2 mb-4" style="height: 1px;"></div>
+            <div class="container-fluid p-0">
+
+                <div class="row g-0">
+                    <div class="col-12 col-md-6 col-lg-4 text-capitalize text-light">
+                        <div class=" d-flex justify-content-center flex-column align-items-center flex-md-row">
+                            <img src="images/logo/logo.png" class="rounded-pill" style="width: 100px;" alt="">
+                            <h5 class="align-content-center ms-2 fst-italic fs-2">good company</h5>
+                        </div>
+                        <div class="w-100 bg-secondary mt-4 mb-4 d-none d-lg-block" style="height: 1px;"></div>
+                        <div class="list">
+                            <ul class="list-unstyled text-capitalize text-light text-center">
+                                <li class="mb-3">tel : 000-000-000</li>
+                                <li class="mb-3">address : EGYPT</li>
+                                <li class="">fax : 000-000-000</li>
+                        
+                            </ul>
+                        </div> <!-- /list -->
+                    </div> <!-- /col -->
+
+                    <div class="w-100 bg-secondary mt-4 mb-4 d-block d-lg-none" style="height: 1px;"></div>
+
+                    <div class="col-12 col-md-6 col-lg-4 text-capitalize text-light ">
+                        <div class="d-flex justify-content-center flex-column align-items-center flex-md-row">
+                            <img src="images/logo/logo.png" class="rounded-pill" style="width: 100px;" alt="">
+                            <h5 class="align-content-center ms-2 fst-italic fs-2">important links</h5>
+                        </div>
+                        <div class="w-100 bg-secondary mt-4 mb-4 d-none d-lg-block" style="height: 1px;"></div>
+                        <div class="list">
+                            <ul class="list-unstyled text-capitalize text-center">
+                                <li class="mb-3"><a class="text-warning" href="#">visit us</a></li>
+                                <li class="mb-3"><a class="text-warning" href="#">take a look</a></li>
+                                <li class=""><a class="text-warning" href="#">your health is more important</a></li>
+                        
+                            </ul>
+                        </div> <!-- /list -->
+                    </div> <!-- /col -->
+
+                    <div class="w-100 bg-secondary mt-4 mb-4 d-block d-lg-none" style="height: 1px;"></div>
+
+                    <div class="col-12 col-md-6 col-lg-4 text-capitalize text-light ">
+                        <div class="d-flex justify-content-center flex-column align-items-center flex-md-row">
+                            <img src="images/logo/logo.png" class="rounded-pill" style="width: 100px;" alt="">
+                            <h5 class="align-content-center ms-2 fst-italic fs-2">vision</h5>
+                        </div>
+                        <div class="w-100 bg-secondary mt-4 mb-4 d-none d-lg-block" style="height: 1px;"></div>
+                        <div class="list">
+                            <ul class="list-unstyled text-capitalize text-light text-center">
+                                <li class="mb-3">services for all</li>
+                                <li class="mb-3">provide best services</li>
+                                <li class="">you will be better than before</li>
+                        
+                            </ul>
+                        </div> <!-- /list -->
+                    </div> <!-- /col -->
+                </div> <!-- /row -->
+            </div> <!-- /container -->
+
+            <div class="w-100 bg-secondary mt-4 mb-4" style="height: 1px;"></div>
+
+            <div class="container">
+                <p class="text-warning text-capitalize text-center opacity-25 fs-5">&copy; 2025 foodExpress. all rights reserved. designed by <span class="text-uppercase">yazan adnan mustafa matar</span></p>
+            </div>
+
+        </div>
+    </footer>
+    
+    
+    
+
+
+    
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+</body>
+</html>
